@@ -1,4 +1,6 @@
+@(playerName : String, crew : String)
 <!DOCTYPE html>
+@import helper._
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -6,13 +8,20 @@
 </head>
 <body>
 <h1>Too Much Ice</h1>
-<p>You should have known if it was that easy someone would have done it already.
-    Your ship is hit by an iceberg.
-    You and your crew fall into the sea and are attacked by giant coelacanths.
-    Lucky for you a passing catfish chases away the coelacanths.
-    You are all able to swim to the shore of a frozen island where you find nothing to eat but lettuce.
-    Years later you are rescued by a ship named Titanic on its way to the New World.
-    The end.
+<p>You go beyond the wall to find a large number of what appears to be walking undead.
+    Up atop a ridge in the distance you see a fearless leader on horseback. He stares into your soul.
+    You realize there is no turning back and your fate has been decided
+    The end for @playerName.
 </p>
+<form action="@routes.GameController.postStart" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Play Again" id="@playerName"/>
+</form>
+<form action="@routes.GameController.getWelcome" method="GET">
+    @CSRF.formField
+    <input type="submit" value="New Player"/>
+</form>
+<br><br><h2>@crew</h2>
+<br><img src="/assets/images/whitewalker.jpg" height="300">
 </body>
 </html>

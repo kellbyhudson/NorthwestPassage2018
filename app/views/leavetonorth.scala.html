@@ -1,0 +1,25 @@
+@(crew : String)
+<!DOCTYPE html>
+@import helper._
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Wall</title>
+</head>
+<body>
+<h1>A Large Wall</h1>
+<p>You meet a man named Jon Snow of the North who patrols the great Wall you have come to. He warns to to heed his knowledge of the terrifying warriors further North.
+You see the fear in his eyes and see the blood stains on his garments.</p>
+<p>But you have a sneaky suspicion this man knowns nothing...</p>
+<form action="@routes.GameController.postHomePort" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Heed his advice and return to Kings Landing"/>
+</form>
+<form action="@routes.GameController.postNorthFromEngland" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Go Beyond the Wall"/>
+</form>
+<br><br><h2>@crew</h2>
+<br><img src="/assets/images/wall.jpg" height="300">
+</body>
+</html>

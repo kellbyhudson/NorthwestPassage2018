@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+@import helper._
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BUT Louis...</title>
+</head>
+<body>
+<audio autoplay loop>
+    <source src="/assets/audio/louisblaster.wav" />
+</audio>
+<h1>Louis Louis Louis Louis Louis</h1>
+<p><i>RECTANGLE</i>,<i>RECTANGLE</i>,<i>RECTANGLE</i>,<i>RECTANGLE</i>,
+    <i>RECTANGLE</i>,<i>RECTANGLE</i>,<i>RECTANGLE</i>,<i>RECTANGLE</i>,
+    <i>RECTANGLE</i>,<i>RECTANGLE</i>,<i>RECTANGLE</i>,<i>RECTANGLE</i>,
+    <b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,
+<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,
+<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,<b><i>RECTANGLE</i></b>,
+<br><h1>STAY ON TARGET</h1></p>
+<br><img src="/assets/images/laser.png" height="300">
+<form action="@routes.GameController.getWelcome" method="GET">
+    @CSRF.formField
+    <input type="submit" value="Yes I am THE Louis"/>
+</form>
+</body>
+</html>

@@ -7,10 +7,14 @@ GET     /showKittens                controllers.GameController.getKittens
 POST    /start                      controllers.GameController.postStart
 POST    /tryWestFromEngland         controllers.GameController.postWestFromEngland
 POST    /tryNorthFromEngland        controllers.GameController.postNorthFromEngland
+POST    /leaveToNorth               controllers.GameController.postLeaveToNorth
 POST    /tryEastFromEngland         controllers.GameController.postEastFromEngland
 POST    /meetEastEnd                controllers.GameController.postEastEnd
 POST    /meetWestEnd                controllers.GameController.postWestEnd
 POST    /backTrackHome              controllers.GameController.postHomePort
+POST    /refuge                     controllers.GameController.postRefuge
+POST    /threeeyeraven              controllers.GameController.postRaven
+POST    /louiseasteregg             controllers.GameController.postLouisEasterEgg
 
 # Map static resources from the /public folder to the /assets URL path
 GET /assets/*file controllers.Assets.versioned(path="/public", file: Asset)

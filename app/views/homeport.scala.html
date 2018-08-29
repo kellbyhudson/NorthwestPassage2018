@@ -1,3 +1,4 @@
+@(crew : String)
 <!DOCTYPE html>
 @import helper._
 <html lang="en">
@@ -7,14 +8,14 @@
 </head>
 <body>
 <h1>Shame</h1>
-<p>You are back at home port with nothing to show for it.
-    Better get going before someone notices.
+<p>You are back at Kings Landing with nothing to show for it.
+    Better get going before Geoffrey notices.
 </p>
 <form action="@routes.GameController.postWestFromEngland" method="POST">
     @CSRF.formField
     <input type="submit" value="Sail West"/>
 </form>
-<form action="@routes.GameController.postNorthFromEngland" method="POST">
+<form action="@routes.GameController.postLeaveToNorth" method="POST">
     @CSRF.formField
     <input type="submit" value="Sail North"/>
 </form>
@@ -22,5 +23,7 @@
     @CSRF.formField
     <input type="submit" value="Sail East"/>
 </form>
+<br><br><h2>@crew</h2>
+<br><img src="/assets/images/disappointment.jpg" height="300">
 </body>
 </html>
